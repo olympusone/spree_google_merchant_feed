@@ -24,16 +24,18 @@ xml.rss version: "2.0", "xmlns:g" => "http://base.google.com/ns/1.0" do
           xml.tag! "g:availability_date", product.available_on.strftime("%Y-%m-%dT%H:%M%z") if product.available_on?
           xml.tag! "g:expiration_date", product.discontinue_on.strftime("%Y-%m-%dT%H:%M%z") if product.discontinue_on?
           xml.tag! "g:price", format('%.2f', product.display_amount.to_d) + " " + current_currency
-        
+
           # Product category
           xml.tag! "g:product_type", product_breadcrumb_taxons(product).map(&:name).join(' > ')
 
           # Product identifiers
           xml.tag! "g:brand", product.brand.name if product.brand.present?
-          xml.tag! "g:gtin", product.sku
 
           # Detailed product description
-          xml.tag! "g:product_weight", "#{product.weight}#{product.weight_unit}" if product.weight.present?
+          xml.tag! "g:product_weight", "#{product.weight} #{product.weight_unit}" if product.weight.present?
+
+          # Shipping
+          xml.tag! "g:shipping_weight", "#{product.weight} #{product.weight_unit}" if product.weight.present?
         end
       end
     end
