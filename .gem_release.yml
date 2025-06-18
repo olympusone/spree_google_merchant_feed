@@ -1,0 +1,3 @@
+bump:
+  file: "lib/spree_google_merchant_feed/version.rb"
+
