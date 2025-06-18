@@ -24,6 +24,7 @@ xml.rss version: "2.0", "xmlns:g" => "http://base.google.com/ns/1.0" do
           xml.tag! "g:availability_date", product.available_on.strftime("%Y-%m-%dT%H:%M%z") if product.available_on?
           xml.tag! "g:expiration_date", product.discontinue_on.strftime("%Y-%m-%dT%H:%M%z") if product.discontinue_on?
           xml.tag! "g:price", format('%.2f', product.display_amount.to_d) + " " + current_currency
+          xml.tag! "g:unit_pricing_measure", "#{product.weight}#{product.weight_unit}" if product.weight.present?
 
           # Product category
           xml.tag! "g:product_type", product_breadcrumb_taxons(product).map(&:name).join(' > ')
