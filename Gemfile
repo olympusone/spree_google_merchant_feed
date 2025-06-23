@@ -17,7 +17,4 @@ gem 'mysql2' if ENV['DB'] == 'mysql' || ENV['CI']
 gem 'pg' if ENV['DB'] == 'postgres' || ENV['CI']
 
 gem 'sqlite3', '>= 2.0'
-
-gem 'savon', '~> 2.15'
-
 gemspec
