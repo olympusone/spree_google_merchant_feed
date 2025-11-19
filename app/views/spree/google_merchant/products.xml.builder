@@ -16,7 +16,7 @@ xml.rss version: "2.0", "xmlns:g" => "http://base.google.com/ns/1.0" do
           xml.tag! "g:description", product.storefront_description&.truncate(5000)
           xml.tag! "g:link", spree_storefront_resource_url(product)
           if product.default_image.present?
-            xml.tag! "g:image_link", spree_image_url(product.featured_image, width: 500, height: 500)
+            xml.tag! "g:image_link", spree_image_url(product.default_image, width: 500, height: 500)
           end
 
           # Price and availability
