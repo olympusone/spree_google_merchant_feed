@@ -1,0 +1,8 @@
+---
+el:
+  spree:
+    admin:
+      integrations:
+        google_merchant_feed:
+          title: Google Merchant Feed
+          description: Το Google Merchant Feed είναι εργαλείο για καταχωρίσεις προϊόντων στο Google Merchant Center

@@ -1,6 +1,6 @@
 FactoryBot.define do
-  # Define your Spree extensions Factories within this file to enable applications, and other extensions to use and override them.
-  #
-  # Example adding this to your spec_helper will load these Factories for use:
-  # require 'spree_google_merchant_feed/factories'
+  factory :google_merchant_feed_integration, class: Spree::Integrations::GoogleMerchantFeed do
+    active { true }
+    store { Spree::Store.default }
+  end
 end

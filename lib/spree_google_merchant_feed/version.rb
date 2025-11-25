@@ -1,5 +1,5 @@
 module SpreeGoogleMerchantFeed
-  VERSION = '1.0.5'.freeze
+  VERSION = '1.1.0'.freeze
 
   def gem_version
     Gem::Version.new(VERSION)

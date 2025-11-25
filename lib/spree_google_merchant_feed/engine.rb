@@ -13,6 +13,14 @@ module SpreeGoogleMerchantFeed
       SpreeGoogleMerchantFeed::Config = SpreeGoogleMerchantFeed::Configuration.new
     end
 
+    initializer 'spree_google_merchant_feed.assets' do |app|
+      app.config.assets.precompile += %w[spree_google_merchant_feed_manifest]
+    end
+
+    initializer 'spree_google_merchant_feed.importmap', after: 'spree.admin.importmap' do |app|
+      app.config.spree_admin.importmap.draw(root.join('config/importmap.rb'))
+    end
+
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)

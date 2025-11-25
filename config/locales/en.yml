@@ -1,0 +1,8 @@
+---
+en:
+  spree:
+    admin:
+      integrations:
+        google_merchant_feed:
+          title: Google Merchant Feed
+          description: Google Merchant Feed is a channel integration for product listings on Google Merchant Center
