@@ -9,14 +9,14 @@ Gem::Specification.new do |s|
   s.name        = 'spree_google_merchant_feed'
   s.version     = SpreeGoogleMerchantFeed::VERSION
   s.summary     = 'Spree Commerce Google Merchant Extension'
-  s.description = 'Adds the ability to provide products listings to Google Merchant Center for Spree Commerce.'
+  s.description = 'Adds the ability to provide products listings to Spree stores.'
 
   s.required_ruby_version = '>= 3.0'
 
   s.author    = 'OlympusOne'
   s.email     = 'info@olympusone.com'
   s.homepage  = 'https://github.com/olympusone/spree_google_merchant_feed'
-  s.license   = 'MIT'
+  s.license   = 'AGPL-3.0-or-later'
 
   s.metadata = {
     "bug_tracker_uri"   => "#{s.homepage}/issues",
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 5.0.4'
+  spree_version = '>= 5.1.8'
   s.add_dependency 'spree', spree_version
   s.add_dependency 'spree_storefront', spree_version
   s.add_dependency 'spree_admin', spree_version
