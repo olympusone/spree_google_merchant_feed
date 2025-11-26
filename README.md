@@ -8,7 +8,7 @@ This is a Google Merchant extension for [Spree Commerce](https://spreecommerce.o
 
 1. Add this extension to your Gemfile:
 
-    ```ruby
+    ```bash
     bundle add spree_google_merchant_feed
     ```
 
