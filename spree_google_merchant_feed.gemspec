@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_google_merchant_feed'
   s.version     = SpreeGoogleMerchantFeed::VERSION
   s.summary     = 'Spree Commerce Google Merchant Extension'
-  s.description = 'Adds the ability to provide products listings to Spree stores.'
+  s.description = 'Adds the ability to provide products listings to Google Merchant Center.'
 
   s.required_ruby_version = '>= 3.0'
 
