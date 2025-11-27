@@ -29,6 +29,7 @@ xml.rss version: "2.0", "xmlns:g" => "http://base.google.com/ns/1.0" do
           # Product category
           xml.tag! "g:product_type", product_breadcrumb_taxons(product).map(&:name).join(' > ')
 
+          # TODO: Spree::Product#category is deprecated and will be removed in Spree 6. Please use Spree::Product#category_taxon instead.
           # Product identifiers
           xml.tag! "g:brand", product.brand.name if product.brand.present?
 
