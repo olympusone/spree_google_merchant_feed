@@ -1,3 +1,3 @@
 Rails.application.config.after_initialize do
-  Rails.application.config.spree.integrations << Spree::Integrations::GoogleMerchantFeed
+  Spree.integrations << Spree::Integrations::GoogleMerchantFeed
 end

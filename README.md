@@ -1,4 +1,4 @@
-# SpreeGoogleMerchantFeed
+# Spree Google Merchant Feed
 
 This is a Google Merchant extension for [Spree Commerce](https://spreecommerce.org), an open‑source e-commerce platform built with Ruby on Rails. It adds the ability to provide products listings to Google Merchant Center.
 
@@ -6,7 +6,7 @@ This is a Google Merchant extension for [Spree Commerce](https://spreecommerce.o
 
 ## Installation
 
-1. Add this extension to your Gemfile:
+1. Add this extension to your Gemfile with this line:
 
     ```bash
     bundle add spree_google_merchant_feed
@@ -40,39 +40,26 @@ To use your Google Merchant endpoint as a data source in Google Merchant Center:
 
 ## Developing
 
-1. Create a dummy app:
+1. Create a dummy app
 
     ```bash
     bundle update
     bundle exec rake test_app
     ```
 
-2. Add code.
+2. Add your new code
 
-3. Run tests:
+3. Run tests
 
     ```bash
     bundle exec rspec
     ```
 
-When testing your application's integration you may use its factories:
+When testing your applications integration with this extension you may use it's factories.
+Simply add this require statement to your spec_helper:
 
 ```ruby
 require 'spree_google_merchant_feed/factories'
-```
-
-## Testing
-
-Generate the test app:
-
-```bash
-bundle exec rake test_app
-```
-
-Then run:
-
-```bash
-bundle exec rspec
 ```
 
 ## Releasing a new version
